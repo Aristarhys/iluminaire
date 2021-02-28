@@ -11,4 +11,6 @@ RUN pip install -U pip wheel --no-cache-dir && \
     pip install luminaire --no-cache-dir && \
     rm -rf /tmp/*
 
-ENTRYPOINT ["python"]
+COPY entrypoint.sh /entrypoint.sh
+
+ENTRYPOINT ["/entrypoint.sh"]
