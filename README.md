@@ -18,7 +18,7 @@ docker run --rm -ti aristarhys/luminaire python
 mkdir -p data
 cd ./data
 # obtain dataset
-curl https://raw.githubusercontent.com/Aristarhys/luminaire/master/luminaire/tests/datasets/daily_test_time_series.csv -so daily_test_time_series.csv
+curl https://github.com/zillow/luminaire/blob/master/luminaire/tests/datasets/daily_test_time_series.csv -so daily_test_time_series.csv
 # put script.py in same folder
 docker run --rm -v `pwd`/data:/data -t aristarhys/luminaire python /data/script.py
 ```
