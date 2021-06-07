@@ -6,10 +6,9 @@ ENV OS_ARCH="amd64" \
     OS_NAME="linux" \
     PYTHON_LOCATION="/opt/bitnami"
 
-ARG PYTHON_VERSION=3.8.7
+ARG PYTHON_VERSION=3.8.10
 ARG NUMPY_VERSION=1.17.5
 ARG SCIPY_VERSION=1.2.3
-ARG SCIKIT_VERSION=0.19.2
 
 RUN install_packages build-essential curl ca-certificates tar liblapack-dev gfortran && \
     curl https://downloads.bitnami.com/files/stacksmith/python-${PYTHON_VERSION}-0-${OS_NAME}-${OS_ARCH}-${OS_FLAVOUR}.tar.gz -so /tmp/python.tar.gz && \
